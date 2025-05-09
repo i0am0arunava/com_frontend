@@ -892,7 +892,7 @@ color: #080420;
 
 .qrcode{
 
-
+background-color: #000000;
   height:1000px;
 }
 @media screen and (max-width: 768px) {
@@ -1150,4 +1150,79 @@ margin-left: 60px;
   .contaaa{
     width:340px;
   }
+}
+
+.loader-container {
+ margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading{
+height: 100px;
+  width:500px
+}
+
+
+.compimg {
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  width: 400px;
+  height: 100px;
+}
+
+.icon {
+
+  width: 24px;
+  height: 24px;
+  top: 100px;
+}
+
+.left-icon {
+  margin-top: 88px;
+  margin-right: 60px;
+  font-size: 40px;
+  color: #8b8989;
+}
+
+.right-icon {
+  font-size: 40px;
+  margin-top: 90px;
+  margin-left: 280px;
+  right: 0;
+  color: #8b8989;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.dots svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dots path {
+  fill: none;
+  stroke: rgb(99, 92, 92);
+  stroke-dasharray: 3, 10;
+  stroke-linecap: round;
+  stroke-width: 2;
+}
+.text-center {
+  color: rgb(73, 76, 77);
 }

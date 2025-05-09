@@ -1,17 +1,21 @@
 // components/QRCode.jsx
-import { useEffect, useState,useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import QRCode from 'qrcode';
-import {  host } from "../utils/APIRoutes";
-import {  fronthost } from "../utils/APIRoutes";
+import { host } from "../utils/APIRoutes";
+import { fronthost } from "../utils/APIRoutes";
 import { io } from "socket.io-client"
 import "./all.css"
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { v4 as uuidv4 } from 'uuid';
 import { useContext } from "react";
 import { ThemeContext } from "../context/theme";
+import { MdOutlineTabletAndroid } from "react-icons/md";
+import ani from "./ani.gif"
+import { HiComputerDesktop } from "react-icons/hi2";
 export default function QRCodeComponent() {
-
+  const [loading, setLoading] = useState(false);
   const [qrCodeUrl, setQrCodeUrl] = useState('');
- const socket = useRef()
+  const socket = useRef()
   useEffect(() => {
     socket.current = io(host);
     socket.current.emit("add-scanner", "arun");
@@ -19,7 +23,7 @@ export default function QRCodeComponent() {
       try {
         const randomUsername = `user_${Math.random().toString(36).substring(2, 8)}`;
         const randomEmail = `${randomUsername}@example.com`;
-        
+
         const payload = {
           id: uuidv4(),
           username: randomUsername,
@@ -27,7 +31,7 @@ export default function QRCodeComponent() {
           timestamp: Date.now(),
           nonce: uuidv4(),
         };
-        
+
         const qrData = await QRCode.toDataURL(JSON.stringify(payload));
         setQrCodeUrl(qrData);
       } catch (err) {
@@ -48,25 +52,28 @@ export default function QRCodeComponent() {
 
 
     return () => {
- 
+
       socket?.current?.off("confirm", handleconfirm);
-   
+
     };
   }, []);
 
-  const handleconfirm=(user)=>{
+  const handleconfirm = (user) => {
     console.log("hellowerr")
 
 
-console.log(user)
-  
+    console.log(user)
 
+    setLoading(true);
     localStorage.setItem("chat-app-user", JSON.stringify(user));
-    localStorage.setItem("linked","123456")
-    
-    window.location.href = `${fronthost}/chat`;
-    
-    }
+    localStorage.setItem("linked", "123456")
+
+    setTimeout(() => {
+      window.location.href = `${fronthost}/chat`;
+    }, 3000);
+
+
+  }
 
 
 
@@ -75,11 +82,31 @@ console.log(user)
 
   return (
     <div className="flex flex-col items-center justify-center mt-10 qrcode">
-      <h1 className="text-lg font-semibold mb-4">QR Code for ID=1234</h1>
-      {qrCodeUrl ? (
-        <img className="qrcode" src={qrCodeUrl} alt="QR Code" />
+      {loading ? (
+        <div className="loader-container">
+          <div className='compimg'>
+            <div className="icon left-icon"><MdOutlineTabletAndroid /></div>
+
+
+            <div className="dots">
+              <svg viewBox="0 0 300 100">
+                <path d="M 0 100 Q 150 -20 300 100" />
+              </svg>
+            </div>
+            <div className="icon right-icon"><HiComputerDesktop /></div>
+          </div>
+          <img className='loading' src={ani} alt="Loading..." />
+          <p className="text-center mt-4">Connecting ....</p>
+        </div>
       ) : (
-        <p>Generating QR Code...</p>
+        <>
+          <h1 className="text-lg font-semibold mb-4">QR Code for ID=1234</h1>
+          {qrCodeUrl ? (
+            <img className="qrcode" src={qrCodeUrl} alt="QR Code" />
+          ) : (
+            <p>Generating QR Code...</p>
+          )}
+        </>
       )}
     </div>
   );
