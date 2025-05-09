@@ -3,7 +3,7 @@ import { Html5QrcodeScanner } from 'html5-qrcode';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import './Ap.css';
-
+import {  host } from "../utils/APIRoutes";
 
 import reactLogo from '../assets/logo.svg'
 import { io } from "socket.io-client"
@@ -14,7 +14,7 @@ function App() {
   const [result,setResult] =useState()
   const scannerRef = useRef(null);
   const [loading, setLoading] = useState(false);
-  const API_BASE_URL = 'http://localhost:5000';
+
   const navigate=useNavigate();
  
   const socket = useRef()
@@ -25,7 +25,7 @@ function App() {
 
 
   useEffect(() => {
-    socket.current = io(API_BASE_URL);
+    socket.current = io(host);
     
     return () => {
       if (socket.current) {
