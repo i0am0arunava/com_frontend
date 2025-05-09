@@ -81,7 +81,10 @@ export default function QRCodeComponent() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center mt-10 qrcode">
+
+
+
+<div>
       {loading ? (
         <div className="loader-container">
           <div className='compimg'>
@@ -100,14 +103,74 @@ export default function QRCodeComponent() {
         </div>
       ) : (
         <>
-          <h1 className="text-lg font-semibold mb-4">QR Code for ID=1234</h1>
-          {qrCodeUrl ? (
-            <img className="qrcode" src={qrCodeUrl} alt="QR Code" />
-          ) : (
-            <p>Generating QR Code...</p>
-          )}
+            <div className="whatsapp-login-container">
+      <div className="login-card-horizontal">
+        {/* Left Content */}
+        <div className="login-left">
+          <div className="login-header">
+            <h1 className="login-title">Log into Message Web</h1>
+            <p className="login-subtitle">
+              Message privately with friends and family using Message on your browser.
+            </p>
+          </div>
+  
+          <div className="steps-container">
+            <div className="step">
+              <div className="step-number">1</div>
+              <p className="step-text">Open Message on your phone</p>
+            </div>
+            <div className="step">
+              <div className="step-number">2</div>
+              <p className="step-text">
+                Tap <span className="bold-text">Menu</span> on Android, or <span className="bold-text">Settings</span> on iPhone
+              </p>
+            </div>
+            <div className="step">
+              <div className="step-number">3</div>
+              <p className="step-text">
+                Tap <span className="bold-text">Linked devices</span> and then <span className="bold-text">Link a device</span>
+              </p>
+            </div>
+            <div className="step">
+              <div className="step-number">4</div>
+              <p className="step-text">Point your phone at this screen to scan the QR code</p>
+            </div>
+          </div>
+  
+          <div className="footer-section">
+            <p className="help-text">Need help getting started?</p>
+            <div className="footer-actions">
+              <button className="phone-login-button">Log in with phone number</button>
+              <div className="stay-logged-in">
+                <input type="checkbox" id="stay-logged-in" className="stay-logged-checkbox" />
+                <label htmlFor="stay-logged-in" className="stay-logged-label">
+                  Stay logged in on this browser
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        {/* QR Code / Right Side */}
+        <div className="qr-section">
+       {qrCodeUrl &&(
+            <>
+              <img className="qrcode" src={qrCodeUrl} alt="Message QR Code" />
+              <p className="scan-instruction">Scan this QR code with your phone's Message</p>
+            </>
+          ) }
+        </div>
+      </div>
+    </div>
         </>
       )}
     </div>
+
+
+
+   
+
+ 
   );
+  
 }

@@ -890,11 +890,7 @@ color: #080420;
 }
 
 
-.qrcode{
 
-background-color: #000000;
-  height:1000px;
-}
 @media screen and (max-width: 768px) {
   .navigate{
   font-size: 32px;
@@ -1225,4 +1221,435 @@ height: 100px;
 }
 .text-center {
   color: rgb(73, 76, 77);
+}
+
+
+
+/* DeviceInfo.css */
+.containersuccess {
+  height: 100vh;
+  background-color: #000000;
+  color: white;
+  font-family: "'SamsungOne', -apple-system, sans-serif";
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.deviceImageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deviceImage {
+  height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.1));
+}
+
+.previewBadge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-color: rgba(0,0,0,0.7);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iconCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.statusBar {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.statusItem {
+  color: #b7c0b4;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.actionButtonsContainer {
+  
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.actionButtonsContainer button{
+
+  color:#818680
+}
+.actionButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 18px 16px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #222;
+  color: white;
+  font-size: 16px;
+}
+
+.destructiveButton {
+  color: #FF3B30;
+  border-bottom: none;
+}
+.pard{
+font-size: 12 px;
+  margin-top: 30px;
+  color: #686565;
+}
+
+/* If you're using plain CSS */
+/* Main Container */
+.whatsapp-login-container {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.dark .whatsapp-login-container {
+  background-color: #1a202c;
+}
+
+/* Login Card */
+.login-card {
+  max-width: 28rem;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.dark .login-card {
+  background-color: #2d3748;
+}
+
+/* Header */
+.login-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 0.25rem;
+}
+
+.dark .login-title {
+  color: white;
+}
+
+.login-subtitle {
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.dark .login-subtitle {
+  color: #a0aec0;
+}
+
+/* QR Section */
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.qrcode {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  width: 16rem;
+  height: 16rem;
+}
+
+.dark .qrcode {
+  border-color: #4a5568;
+}
+
+.scan-instruction {
+  font-size: 0.75rem;
+  color: #718096;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.dark .scan-instruction {
+  color: #a0aec0;
+}
+
+.qr-placeholder {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .qr-placeholder {
+  border-color: #4a5568;
+  color: #a0aec0;
+}
+
+/* Connection Animation */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connection-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.phone-icon,
+.computer-icon {
+  font-size: 1.5rem;
+  color: #718096;
+}
+
+.dark .phone-icon,
+.dark .computer-icon {
+  color: #a0aec0;
+}
+
+.connection-dots {
+  margin: 0 1rem;
+  width: 3.75rem;
+  height: 1.25rem;
+}
+
+.connection-dots circle {
+  fill: currentColor;
+  color: #a0aec0;
+}
+
+.dot-1 {
+  animation: bounce 1s infinite;
+}
+.dot-2 {
+  animation: bounce 1s infinite 0.2s;
+}
+.dot-3 {
+  animation: bounce 1s infinite 0.4s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.connecting-text {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+.dark .connecting-text {
+  color: #a0aec0;
+}
+
+/* Steps */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+}
+
+.step-number {
+  background-color: #f0fff4;
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  color: #38a169;
+  font-weight: bold;
+  font-size: 0.75rem;
+  margin-right: 0.75rem;
+  margin-top: 0.125rem;
+}
+
+.dark .step-number {
+  background-color: #22543d;
+  color: #9ae6b4;
+}
+
+.step-text {
+  font-size: 0.875rem;
+  color: #4a5568;
+  flex: 1;
+}
+
+.dark .step-text {
+  color: #e2e8f0;
+}
+
+.bold-text {
+  font-weight: 500;
+}
+
+/* Footer */
+.footer-section {
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.dark .footer-section {
+  border-top-color: #4a5568;
+}
+
+.help-text {
+  text-align: center;
+  color: #718096;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.dark .help-text {
+  color: #a0aec0;
+}
+
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phone-login-button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.25rem;
+  color: #38a169;
+  font-weight: 500;
+  font-size: 0.875rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dark .phone-login-button {
+  border-color: #4a5568;
+  color: #68d391;
+}
+
+.phone-login-button:hover {
+  background-color: #f7fafc;
+}
+
+.dark .phone-login-button:hover {
+  background-color: #2d3748;
+}
+
+.stay-logged-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.stay-logged-checkbox {
+  border-radius: 0.125rem;
+  color: #38a169;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.dark .stay-logged-checkbox {
+  border-color: #4a5568;
+}
+
+.stay-logged-label {
+  font-size: 0.75rem;
+  color: #4a5568;
+}
+
+.dark .stay-logged-label {
+  color: #e2e8f0;
+}
+
+/* Horizontal Login Card Layout */
+.login-card-horizontal {
+  display: flex;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 64rem;
+  width: 100%;
+  gap: 2rem;
+}
+
+.dark .login-card-horizontal {
+  background-color: #2d3748;
+}
+
+/* Left side */
+.login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Right side (QR section stays as is) */
+.qr-section {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
