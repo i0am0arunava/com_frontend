@@ -1,0 +1,38 @@
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+  
+    color: white;
+    padding: 1rem;
+  }
+  
+  .maincontainer img {
+    margin: 0 auto;
+    width: 600px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  
+  .maincontainer h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .maincontainer p {
+    font-size: 0.875rem;
+    max-width: 28rem;
+    color: #d1d5db; /* Tailwind's gray-300 */
+    margin-bottom: 0.25rem;
+  }
+  
+  .maincontainer p:last-child {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    color: #6b7280; /* Tailwind's gray-500 */
+  }
+  

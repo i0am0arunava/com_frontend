@@ -1,0 +1,516 @@
+.chat-list-container {
+    width: 460px;
+    height: 100vh;
+    /* WhatsApp-like light gray background */
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-list-header {
+    padding: 20px;
+  display:flex;
+    background-color: #020502;
+    color:white /* Matching background */
+  }
+  
+  .chat-list-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #a1abb1; /* Dark gray text */
+  }
+  
+  .search-options {
+    height:auto;
+    width:auto;
+    padding: 15px;
+   
+    background-color: #020502;/* White background for search area */
+  }
+  
+  .search-bar input {
+    width: 400px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #121311;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    color: #3b4a54; /* Dark gray text */
+  }
+  
+  .quick-filters {
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+  }
+  
+  .filter {
+    font-size: 14px;
+    color: #667781; /* Medium gray */
+    cursor: pointer;
+    padding: 5px 0;
+  }
+  
+  .filter.active {
+    color: #008069; /* WhatsApp green */
+    border-bottom: 2px solid #008069;
+  }
+  
+  .notification-banner {
+    padding: 20px 30px;
+    background-color: #020502; /* Light green notification banner */
+ 
+    font-size: 14px;
+    color: #cad2d6;
+  }
+  
+  .notification-button {
+    background: none;
+    border: none;
+    color: #008069; /* WhatsApp green */
+    font-weight: 600;
+    padding: 0;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .chats {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    background-color: #020502;
+/* White background for chat list */
+  }
+
+  .chats::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .chat-item {
+    display: flex;
+    padding: 12px 15px;
+    border-bottom: 1px solid #1b1c1d;
+    cursor: pointer;
+    background-color: #020502;
+  }
+  
+ 
+  
+
+  
+  .chat-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #dfe5e7;
+    margin-right: 12px;
+    overflow: hidden; /* Ensures the image stays within the rounded bounds */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+  }
+  
+  .chat-content {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  
+  
+  .chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #b1b8bd;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #020502;
+  }
+  
+  .time {
+    font-size: 12px;
+    color: #667781;
+    white-space: nowrap;
+  }
+  
+  .last-message {
+    margin: 0;
+    font-size: 14px;
+    color: #667781;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 30px;
+  }
+  
+  .chat-item.unread .last-message {
+    font-weight: 600;
+    color: #606c74;
+  }
+  
+  /* New additions for archived chats */
+  .archived-section {
+    padding: 8px 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9edef;
+  }
+  
+  .archived-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: #008069;
+    margin-bottom: 8px;
+  }
+  
+  .date-divider {
+    padding: 8px 15px;
+
+    color: #667781;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  /* Unread indicator */
+  .chat-item.unread .chat-header h3 {
+    font-weight: 700;
+  }
+  
+  /* Message status indicators */
+  .message-status {
+    color: #667781;
+    font-size: 12px;
+  }
+  .arch{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #020502;
+  }
+  .usernamess{
+    background-color: transparent !important
+  }
+  .icon{
+
+    color: rgb(216, 210, 210);
+    font-size: 30px;
+  }
+  .chat-headers {
+    background-color: #020502 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-size: 13px;
+    color: #cad3da;
+  }
+
+
+  .menu-button{
+    justify-content: center;
+    align-items: center;
+     border: none;
+    background-color: transparent;
+    margin-left: 330px;
+    
+  
+
+  }
+  .micon{
+    font-size:26px;
+    color: #c8ced1;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  @media screen and (max-width: 768px) {
+  
+
+    .chat-list-container {
+      width: 328px;
+    
+      /* WhatsApp-like light gray background */
+     
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      
+     
+    }
+    
+    .chat-list-header {
+   
+     height: 10px;
+    display:flex;
+  
+      color:white /* Matching background */
+    }
+    
+    .chat-list-header h1 {
+      margin-left:20px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #a1abb1; /* Dark gray text */
+    }
+    
+    .search-options {
+     
+      padding-left: 30px;
+      background-color: #020502;/* White background for search area */
+    }
+    
+    .search-bar input {
+      width: 240px;
+      padding: 10px 15px;
+    
+      border: none;
+      background-color: #1d1e1d;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      color: #3b4a54; /* Dark gray text */
+    }
+    
+    .quick-filters {
+      display: flex;
+      margin-top: 10px;
+      gap: 15px;
+    }
+    
+    .filter {
+      font-size: 14px;
+      color: #667781; /* Medium gray */
+      cursor: pointer;
+      padding: 5px 0;
+    }
+    
+    .filter.active {
+      color: #008069; /* WhatsApp green */
+      border-bottom: 2px solid #008069;
+    }
+    
+    .notification-banner {
+      padding: 20px 30px;
+      background-color: #020502; /* Light green notification banner */
+   
+      font-size: 14px;
+      color: #cad2d6;
+    }
+    
+    .notification-button {
+      background: none;
+      border: none;
+      color: #008069; /* WhatsApp green */
+      font-weight: 600;
+      padding: 0;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+    
+    .chats {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+      background-color: #020502;
+  /* White background for chat list */
+    }
+  
+    .chats::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .chat-item {
+      display: flex;
+      padding: 12px 15px;
+      border-bottom: 1px solid #1b1c1d;
+      cursor: pointer;
+      background-color: #020502;
+    }
+    
+   
+    
+  
+    
+    .chat-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #c7b82d;
+      margin-right: 12px;
+      overflow: hidden; /* Ensures the image stays within the rounded bounds */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   
+    }
+    
+    .avatar-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures the image covers the space without stretching */
+    }
+    
+    .chat-content {
+      display: flex;
+      justify-content: center;
+   
+      display: flex;
+      flex-direction: column;
+   
+ 
+    }
+    
+    
+    
+    .chat-headers h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      color: #b1b8bd;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background-color: #020502;
+    }
+    
+    .time {
+      font-size: 12px;
+      color: #667781;
+      white-space: nowrap;
+    }
+    
+    .last-message {
+      margin: 0;
+      font-size: 10px;
+      color: #667781;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: 30px;
+    }
+    
+    .chat-item.unread .last-message {
+      font-weight: 600;
+      color: #606c74;
+    }
+    
+    /* New additions for archived chats */
+    .archived-section {
+      padding: 8px 15px;
+      background-color: #802323;
+      border-bottom: 1px solid #e9edef;
+    }
+    
+    .archived-header {
+      font-size: 16px;
+      font-weight: 600;
+      color: #008069;
+      margin-bottom: 8px;
+    }
+    
+    .date-divider {
+      padding: 8px 15px;
+  
+      color: #667781;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    
+    /* Unread indicator */
+    .chat-item.unread .chat-header h3 {
+      font-weight: 700;
+    }
+    
+    /* Message status indicators */
+    .message-status {
+      color: #667781;
+      font-size: 12px;
+    }
+    .arch{
+      padding-left: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background-color: #020502;
+    }
+    .usernamess{
+      background-color: transparent !important
+    }
+    .icon{
+  
+      color: rgb(216, 210, 210);
+      font-size: 30px;
+    }
+    .chat-headers {
+      background-color: #020502 !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      margin-left: 30px;
+      font-size: 13px;
+      color: #cad3da;
+    }
+  
+  
+    .menu-button{
+      justify-content: center;
+      align-items: center;
+       border: none;
+      background-color: transparent;
+      margin-left: 200px;
+      
+    
+  
+    }
+    .micon{
+      font-size:16px;
+      color: #c8ced1;
+  
+    }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}

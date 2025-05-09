@@ -1,0 +1,43 @@
+/* comp.css */
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #9a86f3;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.button svg {
+    font-size: 1.3rem;
+    color: #ebe7ff;
+}
+.logoutr{
+
+  color: #9b99a0;
+}
+.typing-indicator {
+ 
+    position: fixed;
+    top: 50%;
+    right: 95px; /* Adjust the right position */
+    transform: translateY(-50%);
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #333; /* Example background color */
+}
+.video {
+    position: absolute;
+  right: 300px;
+  top:20px;
+    color:rgb(47, 255, 0) /* Adjust margin as needed */
+  }
+  .video-icon {
+    font-size: 34px; /* Adjust size as needed */
+  }

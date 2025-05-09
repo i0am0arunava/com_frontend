@@ -1,0 +1,365 @@
+
+/* App Container */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width:380px;
+    padding: 0;
+    align-items: center;
+  }
+  
+  /* App Header */
+  .app-header {
+    width: 100%;
+    background-color: var(--surface);
+    padding: 16px 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 24px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .app-logo {
+    width: 48px;
+    height: 48px;
+  margin-left: 10px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(98, 0, 238, 0.2);
+  }
+  
+  .app-logo svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .app-header-text h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--on-surface);
+    margin-bottom: 2px;
+    margin-left: 60px;
+  }
+  
+  .app-header-text p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 26px;
+  }
+  
+  /* Scanner Card */
+  .scanner-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--surface);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 0 16px;
+  }
+  
+  .scanner-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .app-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--primary-light);
+    margin-bottom: 8px;
+  }
+  
+  .app-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Scanner Wrapper */
+  .scanner-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 24px;
+    background-color: black;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .qr-scanner {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .scan-status {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 4px;
+    margin: 0 16px;
+  }
+  
+  /* Scanning Animation */
+  .scanning-animation {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-light);
+    animation: scanning 2s infinite ease-in-out;
+    border-radius: 2px;
+  }
+  
+  @keyframes scanning {
+    0% { top: 20%; }
+    50% { top: 80%; }
+    100% { top: 20%; }
+  }
+  
+  /* Scanner Guide */
+  .scanner-guide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  
+  .guide-line {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-color: var(--primary-color);
+    border-width: 3px;
+    border-style: solid;
+  }
+  
+  .guide-line.top-left {
+    top: 16px;
+    left: 16px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 8px 0 0 0;
+  }
+  
+  .guide-line.top-right {
+    top: 16px;
+    right: 16px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 8px 0 0;
+  }
+  
+  .guide-line.bottom-left {
+    bottom: 16px;
+    left: 16px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 8px;
+  }
+  
+  .guide-line.bottom-right {
+    bottom: 16px;
+    right: 16px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 8px 0;
+  }
+  
+  /* Scan Preview */
+  .scan-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .scan-success-icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(98, 0, 238, 0.3);
+  }
+  
+  .scan-success-icon svg {
+    width: 36px;
+    height: 36px;
+    fill: white;
+  }
+  
+  .scan-result-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--secondary-color);
+  }
+  
+  .scan-result-data {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: left;
+  }
+  
+  /* Buttons */
+  .scanner-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .scan-again-button, .test-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .scan-again-button {
+    background-color: var(--primary-color);
+    color: var(--on-primary);
+    box-shadow: 0 4px 8px rgba(98, 0, 238, 0.3);
+  }
+  
+  .scan-again-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .test-button {
+    background-color: var(--surface-light);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
+  
+  .test-button:hover {
+    background-color: rgba(3, 218, 198, 0.1);
+  }
+  
+  /* Footer */
+  .app-footer {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 16px;
+  }
+  
+  .developer-name {
+    color: var(--secondary-color);
+    font-weight: 500;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .scanner-card {
+      border-radius: 16px 16px 0 0;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    .app-header {
+      padding: 12px 16px;
+    }
+    
+    .app-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+    
+    .app-logo svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .app-header-text h1 {
+      font-size: 18px;
+    }
+    
+    .app-title {
+      font-size: 20px;
+    }
+  }
+  
+  
+  .scan-error-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    color: #ff4444;
+  }
+  
+  .scan-error-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+  
