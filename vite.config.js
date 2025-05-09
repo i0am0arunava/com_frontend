@@ -14,8 +14,8 @@ export default defineConfig({
       },
       registerType: 'autoUpdate',
       manifest:{
-        "theme_color": "#f69435",
-        "background_color": "#f69435",
+        "theme_color": "#000000",
+        "background_color": "#000000",
         "display": "standalone",
         "scope": "/",
         "start_url": "/",
@@ -23,21 +23,7 @@ export default defineConfig({
         "short_name": "chatapp",
         "description": "react chat app",
         "icons": [
-            {
-                "src": "/icon-192x192.png",
-                "sizes": "192x192",
-                "type": "image/png"
-            },
-            {
-                "src": "/icon-256x256.png",
-                "sizes": "256x256",
-                "type": "image/png"
-            },
-            {
-                "src": "/icon-384x384.png",
-                "sizes": "384x384",
-                "type": "image/png"
-            },
+           
             {
                 "src": "/icon-512x512.png",
                 "sizes": "512x512",
