@@ -1,5 +1,5 @@
 export const host = "https://com-backend-92f2.onrender.com";
-export const fronthost = "http://192.168.152.94:5173";
+export const fronthost = "https://com-frontend-two.vercel.app/";
 export const hostAndroid = "http://192.168.152.94:5000";
 export const loginRoute = `${host}/api/auth/login`;
 export const registerRoute = `${host}/api/auth/register`;

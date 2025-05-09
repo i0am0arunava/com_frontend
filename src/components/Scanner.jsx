@@ -81,7 +81,7 @@ function App() {
     try {
       const token="arun"
       socket?.current?.emit("scanning", user);
-      const response = await axios.post(`${API_BASE_URL}/scanner`, {
+      const response = await axios.post(`${host}/scanner`, {
       id:data
       });
       console.log(response.data);
