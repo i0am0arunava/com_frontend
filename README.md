@@ -18,13 +18,31 @@ Communication Platform(PWA) with Device Linking functionality (Android <-> Deskt
 
 
 ## Device Linking  (Android <-> Desktop)
+<p align="center">
 
 https://github.com/user-attachments/assets/d4a11825-3985-46cc-a4c4-e4c051f40d07
+
+   
+
+</p>
+
+
 ## Desktop  qr code 
 ![Screenshot from 2025-05-28 11-55-36](https://github.com/user-attachments/assets/edbad918-417a-40f4-be10-5e0c0ce6f303)
 
 ## Scanned using an Android device
-![WhatsApp Image 2025-05-28 at 11 53 26 AM](https://github.com/user-attachments/assets/11c59ce9-26db-46f6-aef3-8007b7e1abbc)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/11c59ce9-26db-46f6-aef3-8007b7e1abbc" width="300" height="400" />
+</p>
+
+## connecting
+
+<p align="center">
+
+   <img src="https://github.com/user-attachments/assets/d6fb3b6e-c005-4f6e-bfa4-541233202635" width="300" height="400" />
+</p>
+
+
 ## connecting to Desktop Loading
 ![Screenshot from 2025-05-28 11-58-09](https://github.com/user-attachments/assets/93099156-447a-48a6-9e16-2e961f78af26)
 
@@ -34,7 +52,11 @@ https://github.com/user-attachments/assets/d4a11825-3985-46cc-a4c4-e4c051f40d07
 
 
 ## connected Android View
-![WhatsApp Image 2025-05-28 at 12 00 59 PM](https://github.com/user-attachments/assets/80f83f76-deba-48e6-86f0-56b355a7e251)
+<p align="center">
+
+   <img src="https://github.com/user-attachments/assets/80f83f76-deba-48e6-86f0-56b355a7e251" width="300" height="400" />
+</p>
+
 ## Application Page
 ![Screenshot from 2025-05-26 09-52-10](https://github.com/user-attachments/assets/1b8e66ba-f5ae-418f-9398-bc368316123c)
 ## Video call receving
