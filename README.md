@@ -17,7 +17,7 @@ Communication Platform(PWA) with Device Linking functionality (Android <-> Deskt
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fi0am0arunava%2FuemEvent_fe&label=Repo%20Views&countColor=%2337d67a&labelStyle=upper)
 
 
-Device Linking  (Android <-> Desktop)
+## Device Linking  (Android <-> Desktop)
 
 https://github.com/user-attachments/assets/d4a11825-3985-46cc-a4c4-e4c051f40d07
 
