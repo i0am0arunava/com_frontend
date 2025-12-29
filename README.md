@@ -6,7 +6,7 @@
   <img src="https://github.com/user-attachments/assets/76635c58-43fd-4dca-a595-cad30eccc1b0" alt="logo" />
 </p>
 
-Communication Platform(PWA) with Device Linking functionality (Android <-> Desktop)
+Communicdddddation Platform(PWA) with Device Linking functionality (Android <-> Desktop)
  Implemented Videocall using webrtc + messaging functionality for seamless communication.Added device linking (Phone with Desktop), file sharing (images, GIFs, Word, PDFs), and video call feature.
 
 ![GitHub contributors](https://img.shields.io/github/contributors/i0am0arunava/uemEvent_fe?style=for-the-badge&color=21bf48)
